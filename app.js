@@ -55,7 +55,7 @@ const db = require("./config/db")
     
     // Mongoose
         mongoose.Promise = global.Promise
-        mongoose.connect(db.mongoURI, {useNewUrlParser: true, useUnifiedTopology: true}).then(()=>{
+        mongoose.connect("mongodb+srv://blogappadmin:blogappadmin@cluster0-qfrmn.mongodb.net/test?retryWrites=true&w=majority", {useNewUrlParser: true, useUnifiedTopology: true}).then(()=>{
             console.log("Server running")
         }).catch((err)=>{
             console.log(err)
