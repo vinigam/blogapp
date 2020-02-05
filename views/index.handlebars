@@ -1,0 +1,29 @@
+
+
+<div class="jumbotron">
+  <h1 class="display-4">Welcome!</h1>
+  <p class="lead"> simple blog developed using NodeJS + mongodb + Express</p>
+  <hr class="my-4">
+  <p>Here you can read about some computing issues</p>
+  <p class="lead">
+    <a class="btn btn-primary btn-lg" href="/user/register" role="button">Create an account</a>
+  </p>
+</div>
+<hr>
+<h2>Recent posts</h2>
+
+{{#each posts}}
+    <div class="card">
+        <div class="card-body">
+            <h3>Title: {{title}}</h3>
+            <small>Slug: {{slug}}</small><br>
+            <small>Description: {{description}}</small><br>
+            <small>Content: {{content}}</small><br>
+            <small>Category: {{category.name}}</small><br>
+            <small>Publication date: {{category.date}}</small><br>
+            <a href="/post/{{slug}}"><button class="btn btn-success">Read more</button></a>
+        </div>
+    </div>
+{{else}}
+    Empty
+{{/each}}
